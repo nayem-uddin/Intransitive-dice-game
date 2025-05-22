@@ -2,5 +2,8 @@
 
 ## Note
 
-- `index.py` is the main file
-  [![]](./code_run.mp4)
+- `index.py` is the main file.
+
+<video>
+  <source src="./code_run.mp4">
+</video>
