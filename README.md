@@ -1,3 +1,5 @@
+# Intransitive-dice-game
+
 ## Note
 
 - `index.py` is the main file
