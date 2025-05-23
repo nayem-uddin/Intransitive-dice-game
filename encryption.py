@@ -10,6 +10,9 @@ class keygen:
   def digest(self,key:bytes):
     return hashlib.sha3_256(key).hexdigest()
 
+  @classmethod
+  def keyDigest(self,key:bytes):
+    return hashlib.sha3_256(key).hexdigest()
 
 class HMAC:
   @classmethod

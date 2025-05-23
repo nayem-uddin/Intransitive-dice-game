@@ -18,6 +18,9 @@ try:
   print("(HMAC={})".format(sha3hmac))
   print("Try to guess my selection. You will start first if you guess it right.")
   userInput=inputHandler.numInput(2)
+  print(f"Your choice: {userInput}")
+  print(f"My choice: {compChoice}")
+  print(f'(Key: {keygen.keyDigest(oneTimeKey)})')
   handleMoves.startGame(compChoice,userInput,dices)
 except AssertionError as e:
   print(e)

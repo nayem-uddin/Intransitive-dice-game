@@ -42,6 +42,7 @@ class handleMoves:
     print(f'My roll result is {compRollRes}')
     print("Now your turn")
     userRollRes=handleMoves.handleUserRoll(userDice,compDice,compRollRes)
+    
     print(f'Your roll result is {userRollRes}')
     handleMoves.decision(compRollRes,userRollRes)
 
@@ -61,6 +62,9 @@ class handleMoves:
       userChoice=inputHandler.numInput(6,tablegen.userYetToRoll(compDice,userDice))  
     else:
       userChoice=inputHandler.numInput(6,tablegen.compYetToRoll(compDice,userRollRes))
+    print(f"Your choice: {userChoice}")
+    print(f"My choice: {compChoice}")
+    print(f'(Key: {keygen.keyDigest(key)})')
     fairNum=handleMoves.rollNumber(compChoice,userChoice)
     print(f'The fair number generation result is: {fairNum}')
     rollRes=compDice[fairNum]
@@ -77,6 +81,9 @@ class handleMoves:
       userChoice=inputHandler.numInput(6,tablegen.userFirst(compDice,userDice))
     else:
       userChoice=inputHandler.numInput(6,tablegen.compFirst(compRollRes,userDice))
+    print(f"Your choice: {userChoice}")
+    print(f"My choice: {compChoice}")
+    print(f'(Key: {keygen.keyDigest(key)})')
     fairNum=handleMoves.rollNumber(compChoice,userChoice)
     print(f'The fair number generation result is: {fairNum}')
     rollRes=userDice[fairNum]
